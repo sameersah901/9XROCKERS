@@ -1,0 +1,855 @@
+/* Existing CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header nav a, .footer a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.post-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+@keyframes rainbowText {
+    0% { color: #ff0000; }
+    14% { color: #ff7f00; }
+    28% { color: #ffff00; }
+    42% { color: #00ff00; }
+    57% { color: #0000ff; }
+    71% { color: #4b0082; }
+    85% { color: #9400d3; }
+    100% { color: #ff0000; }
+}
+
+/* New CSS for responsiveness and navbar */
+.header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header nav {
+    display: flex;
+    align-items: center;
+}
+
+.header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.header nav a:hover {
+    color: #f4f4f4;
+}
+
+.header nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #f4f4f4;
+    transition: width .3s;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header nav a:hover::after {
+    width: 100%;
+}
+
+.header .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.header .search-bar input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.header .search-bar button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header .search-bar button:hover {
+    background-color: #555;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+
+    .header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .header .nav-toggle {
+        display: block;
+        scroll-behavior: smooth;
+        cursor: pointer;
+    }
+
+    .header .nav-toggle.active + nav {
+        display: flex;
+    }
+
+    .header nav a {
+        margin: 10px 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    .header .search-bar {
+        width: 100%;
+    }
+
+    .header .search-bar input {
+        width: calc(100% - 80px);
+    }
+
+    .header .search-bar button {
+        width: 80px;
+    }
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    width: calc(100% / 7 - 40px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.post:hover {
+    transform: scale(1.05);
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+
+}
+
+.post h3 {
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    transition: color 0.3s;
+}
+
+.post:hover h3 {
+    animation: rainbowText 4s infinite;
+}
+
+.keywords-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+.keywords-table th, .keywords-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+.keywords-table th {
+    background-color: #333;
+    color: #fff;
+}
+.footer p {
+    margin: 0;
+}
+@media (max-width: 768px) {
+    .post {
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.1em;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffeb3b;
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    width: 200px; /* Adjust width as needed */
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-bar button {
+    background-color: #ffeb3b;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+}
+
+/* labels */
+.labels {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.label {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.label:hover {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+
+/* disclaimer */
+.disclaimer {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.disclaimer h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.disclaimer p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* contact us  */
+.contact-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #ffeb3b;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #ffc107;
+}
+
+
+/* keyword section */
+/* Centering text and adding margins */
+.keyword-introduction, .keyword-overview, .keyword-benefits {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 800px; /* Restrict the width for better readability */
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333; /* Initial black border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+/* Table styling */
+.keyword-table {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+
+.keyword-tables {
+    margin: 20px auto;
+    max-width: auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.keyword-tables table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0; /* Reset margin */
+
+}
+
+.keyword-tables th, .keyword-tables td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.keyword-tables th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.keyword-tables td {
+    background-color: #fff;
+}
+
+/* Animated border on hover */
+.keyword-introduction:hover, .keyword-overview:hover, .keyword-benefits:hover, .keyword-table:hover, .keyword-tables:hover {
+    border-color: #098260; /* Change border color on hover */
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+/* Bold text styling */
+strong {
+    font-weight: bold;
+    color: #333;
+}
+
+
+.keyword-introduction, .keyword-overview, .keyword-benefits, .keyword-table {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+
+/* before contact us  */
+/* Container for the entire movie list section */
+.movie-list-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the entire movie list section */
+.movie-list-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Container for individual movie category boxes */
+.movie-category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Each individual movie category box */
+.movie-category {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+/* Subheading styling for each category */
+.movie-list-subheading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+}
+
+/* List styling */
+.movie-list {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.movie-list li {
+    list-style-type: disc;
+    margin: 5px 0;
+}
+
+/* Hover effect */
+.movie-category:hover {
+    border-color: #ffeb3b;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .movie-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .movie-category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Container for the download guide section */
+.download-guide-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Header for the download guide section */
+.download-guide-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+/* Add this CSS to apply hover effect on the entire download guide section */
+.download-guide-section {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for the border and background color changes */
+}
+
+
+/* Container for the download guide section */
+.download-guide-section {
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.3s, transform 0.3s; /* Smooth transition for border color and scaling effect */
+}
+
+/* Hover effect for the download guide section */
+.download-guide-section:hover {
+    border-color: #ff6347; /* Change border color on hover */
+    transform: scale(1.02); /* Slightly scale the box on hover */
+}
+
+/* Container for the variety section */
+.variety-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the variety section */
+.variety-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Style for the table */
+.variety-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table cells */
+.variety-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Hover effect for table rows */
+.variety-table tr:hover {
+    background-color: #f7f7f7;
+}
+
+/* Container for the related websites section */
+.related-websites-section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the related websites section */
+.related-websites-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Style for the related websites table */
+.related-websites-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Style for table cells */
+.related-websites-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+/* Hover effect for table rows */
+.related-websites-table tr:hover {
+    background-color: #f7f7f7;
+}
+
+/* alternative section */
+
+/* Container for the alternatives section */
+.alternatives-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading for the alternatives section */
+.alternatives-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Description for the alternatives section */
+.alternatives-description {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Container for the alternative cards */
+.alternatives-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 15px; /* Add margin from the left */
+    padding-right: 15px; /* Add margin from the right */
+}
+
+
+/* Style for each alternative card */
+.alternative-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    flex: 1 1 calc(25% - 20px); /* 4 cards per row */
+    margin: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+
+.alternative-card:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+
+/* Container for the Bollyflix App section */
+.bollyflix-app-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading for the Bollyflix App section */
+.bollyflix-app-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Description for the Bollyflix App section */
+.bollyflix-app-description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Container for the Conclusion section */
+.conclusion-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading for the Conclusion section */
+.conclusion-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Description for the Conclusion section */
+.conclusion-description {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+

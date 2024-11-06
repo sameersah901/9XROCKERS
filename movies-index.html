@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bollyflix - BollyFlix Movies download, BollyFlix pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles for Search Bar and Navigation Bar */
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Responsive Styles for Search Bar and Navigation Bar */
+        @media (max-width: 768px) {
+            .search-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-input {
+                margin-bottom: 10px;
+            }
+
+            .search-button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .search-input,
+            .search-button {
+                width: 100%;
+                margin: 0;
+            }
+        }
+
+        /* General Styles for Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Responsive Styles for Tables */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+        }
+
+        /* Container for the blog post section */
+.blog-post-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header for the blog post section */
+.blog-post-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Container for individual blog posts */
+.blog-posts-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Each individual blog post */
+.blog-post {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, transform 0.3s;
+    overflow: hidden;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-post h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.blog-post p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.blog-post .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.blog-post .read-more:hover {
+    background-color: #555;
+}
+
+/* Hover effect */
+.blog-post:hover {
+    border-color: #ffeb3b;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .blog-posts-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-posts-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+
+    <!-- favicon -->
+    <link rel="icon" href="https://bollyflix.gay/wp-content/uploads/2024/01/bollyflix-icon.png" type="image/png">
+
+</head>
+
+<body>
+    <!-- Existing HTML -->
+    <div class="header">
+        <div class="logo">
+            <!-- <img src="bollyflix-logo.gif" alt="BollyFlix Logo"> -->
+            <h1>BollyFlix</h1>
+        </div>
+        <div class="nav-toggle">
+            &#9776;
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#posts">Posts</a>
+            <a href="#contact">Contact</a>
+            <a href="#disclaimer">Disclaimer</a>
+            <form class="search-bar" onsubmit="return validateSearch()">
+                <input type="text" id="searchInput" placeholder="Search..." required>
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+
+    <script>
+
+    </script>
+
+    <!-- labels  -->
+    <div class="labels">
+        <div class="label">Hollywood</div>
+        <div class="label">Bollywood</div>
+        <div class="label">Tollywood</div>
+        <div class="label">Webseries</div>
+        <div class="label">3D Movies</div>
+        <div class="label">South Movies</div>
+        <div class="label">Hindi Dubbed</div>
+        <div class="label">Nepali Movies</div>
+        <div class="label">Pakistani Movies</div>
+
+        <!-- Add more labels as needed -->
+    </div>
+
+
+    <!-- blog post -->
+    <section class="blog-post-section">
+        <h2 class="blog-post-heading">Latest Blog Posts</h2>
+        <div class="blog-posts-container">
+            <div class="blog-post">
+                <img src="path/to/image1.jpg" alt="Blog Post Image">
+                <h3>Blog Post Title 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula dolor ac sapien consequat, nec venenatis nulla malesuada.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="path/to/image2.jpg" alt="Blog Post Image">
+                <h3>Blog Post Title 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula dolor ac sapien consequat, nec venenatis nulla malesuada.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-post">
+                <img src="path/to/image3.jpg" alt="Blog Post Image">
+                <h3>Blog Post Title 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula dolor ac sapien consequat, nec venenatis nulla malesuada.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+    
+
+    
+    <!-- Conclusion Section -->
+    <div class="conclusion-section">
+        <h2 class="conclusion-heading">Conclusion</h2>
+        <p class="conclusion-description">This is the best option if you are looking for a place to download free
+            movies. The site contains Bollywood and Hollywood films, which can be downloaded free of charge. Similarly,
+            the site fundamentally overhauls its library so you'll generally have another dismal thing to watch.</p>
+    </div>
+
+    <!-- contact form -->
+    <div id="contact" class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- disclaimer -->
+
+    <div id="disclaimer" class="disclaimer">
+        <h2>Disclaimer</h2>
+        <p>Bollyflix.pages.dev For instance, dev never Advances people to visit any unknown site for tuning film. The
+            above article is only for informational purposes. It is not known whether he will echo the X-Story
+            idea-owned - based on an Indian show. Disclaimer:- All This website refer above is third-party sites and we
+            do not recommend downloading movies from these websites. Well assuming you want to download TV programs or
+            films from these destinations, Kindly do so in any case all exhortation moving against the norm.</p>
+    </div>
+
+
+    <div class="footer">
+        <p>© 2024 BollyFlix.pages.dev</p>
+        <a href="#contact">Contact</a> | <a href="#privacy">Privacy Policy</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
